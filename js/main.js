@@ -467,11 +467,11 @@ async function fetch_taspeh() {
 
 function left(){
     var left = document.querySelector(".contant-leacure")
-    left.scrollBy(660, 0);
+    left.scrollBy(636, 0);
 }
 function right(){
     var right = document.querySelector(".contant-leacure")
-    right.scrollBy(-660, 0);
+    right.scrollBy(-636, 0);
 }
 
 
