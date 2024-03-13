@@ -81,7 +81,7 @@ async function get_quran(){
 
         surahlist.forEach((title , index)=>{
             title.addEventListener("click" , ()=>{
-                fetch(`http://api.alquran.cloud/v1/surah/${index + 1}`)
+                fetch(`https://api.alquran.cloud/v1/surah/${index + 1}`)
                 .then(response=>{
                     return response.json();
                 })
