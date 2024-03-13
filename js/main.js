@@ -62,7 +62,7 @@ gethadis();
 async function get_quran(){
     try{
         let contant_surah = document.querySelector(".contant-surah");
-        const response = await fetch( "http://api.alquran.cloud/v1/meta");
+        const response = await fetch( "https://api.alquran.cloud/v1/meta");
         const data = await response.json();
         let surah = data.data.surahs.references;
         surah.map((item)=>{
@@ -116,7 +116,7 @@ get_quran();
 async function preytime(){
     try{
         let time_container = document.querySelector(".time-container");
-        const response = await fetch("http://api.aladhan.com/v1/timingsByCity?city=cairo&country=egypt Arab Emirates&method=8");
+        const response = await fetch("https://api.aladhan.com/v1/timingsByCity?city=cairo&country=egypt Arab Emirates&method=8");
         const data = await response.json();
         let times = data.data.timings;
 
