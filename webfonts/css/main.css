@@ -1,0 +1,382 @@
+:root{
+    --main-background:#000000aa;
+    --second-background: whitesmoke;
+    --f-color:#fff;
+    --color-2:#ee8d10;
+    --color-3:darkgreen;
+    --color-4:#000;
+    --main-color-border:antiquewhite;
+    --border-list-header:#00000067;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    outline:none;
+    scroll-behavior: smooth;
+
+}
+ul li{
+    list-style: none;
+}
+body{
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+/* start header */
+.header{
+    color:var(--color-3);
+    position: relative;
+    width: fit-content;
+    margin:0  auto;
+}
+.header::after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    width:100%;
+    transform: translateX(-50%);
+    background-color: var(--color-3);
+    height:2px;
+
+}
+.header::before{
+    content:'';
+    position: absolute;
+    bottom: -10px;
+    left:50%;
+    width:60%;
+    transform: translateX(-50%);
+    background-color: var(--color-3);
+    height:2px;
+}
+/* end header */
+/* start navbar section */
+.navbar-expand-lg{
+   position: fixed;
+   left:0;
+   top:0;
+   right:0;
+   z-index: 10;
+   width:100%;
+}
+
+.navbar-brand{
+    width:100px;
+}
+.nav-link{
+    color:var(--f-color);
+    position: relative;
+    transition: .5s;
+}
+.nav-link:hover{
+    color:var(--color-2);
+}
+.nav-link::after{
+    content:'';
+    position: absolute;
+    background-color: var(--f-color);
+    color: var(--f-color);
+    bottom: 0;
+    right:0;
+    width:0;
+    height:2px;
+    transition: .5s;
+}
+.nav-link:hover::after{
+    width:100%;
+}
+
+.fa-bars{
+    color:#fff;
+    
+}
+@media (max-width:991px) {
+    .navbar-collapse{
+        width:300px;
+        position: absolute;
+        left:0px;
+        top:72px;
+        background-color: var(--main-background);
+        padding:20px;
+        text-align: center;
+    }
+}
+
+/* end navbar section */
+
+/* start landing section */
+.landing-section{
+    height:100vh;
+    width:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/1.jpg);
+    display:flex;
+    align-items: center;
+}
+.contant h1{
+    color:var(--f-color);
+    font-weight: 400;
+}
+.contant .main-btn{
+    margin-top: 10px;
+    border:2px solid var(--f-color);
+    outline:none;
+    background-color: transparent;
+    color:var(--f-color);
+    border-radius: 5px;
+    transition: .5s;
+    position: relative;
+}
+.contant .main-btn > span , .contant .main-btn > svg{
+    position: relative;
+    z-index: 100;
+}
+.contant .main-btn::after{
+    content:'';
+    position:absolute;
+    right:0;
+    top:0;
+    width:0;
+    height:100%;
+    background-color: var(--f-color);
+    border-radius: 5px;
+    transition: .4s ease-in;
+}
+.contant .main-btn:hover{
+    color:var(--color-2);
+    border:2px solid var(--color-2);
+}
+.contant .main-btn:hover::after{
+    width:100%;
+}
+
+/* end landing section */
+
+.contant-tlawa{
+    padding:30px;
+    box-shadow: 1px 0 5px 0px;
+    min-height:300px;
+}
+
+.contant-tafsir{
+    padding:30px;
+    box-shadow: 1px 0 5px 0px;
+    min-height:300px;
+}
+
+/* start section Ahadis */
+
+
+.show-contant{
+    box-shadow: 1px 0 5px 0px;
+    min-height:300px;
+    padding: 50px 60px;
+    line-height: 2;
+}
+.number-Ahdis{
+    background-color:var(--f-color);
+    box-shadow: 2px 0 7px 1px;
+    padding:5px 15px;
+}
+
+/* end section Ahadis */
+
+/* start section leacure */
+.leacure{
+    background-color: var(--second-background);
+}
+.cart-leacure{
+    border: 2px solid var(--border-list-header);
+    transition: .4s;
+    cursor: pointer;
+    width:100%;
+    position: relative;
+    z-index: 100;
+}
+
+.cart-leacure:hover{
+    transform: scale(.97);
+}
+.logo-leacure{
+    width:90px;
+    height:90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.col-leacure{
+    padding:0;
+    overflow-x: hidden;
+}
+.contant-leacure{
+    overflow-x: hidden;
+    min-width:100%;
+    scroll-behavior: smooth;
+    
+}
+.show-leacure-1{
+    display:flex;
+    flex-wrap: wrap;
+}
+.fram-leacure{
+    width:90%;
+    margin-right: 40px;
+}
+
+
+/* end section leacure */
+/* start section koraan */
+.contant-surah{
+    flex-wrap: wrap;
+}
+.koran .card-item{
+    width:120px;
+    height:80px;
+    flex-direction: column;
+    box-shadow: 1px 0 5px 0px;
+    transition: .4s;
+    cursor: pointer;
+}
+.koran .card-item:hover{
+    transform: scale(1.1);
+}
+.search-label{
+    width:160px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* end section koraan */
+
+/* start section popup surah */
+.surah-popup{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: var(--f-color);
+    z-index: 100;
+    overflow-y: scroll;
+    transform: translateX(100%);
+}
+.surah-popup.active{
+    transform: translateX(0);
+    transition: .7s transform ease-in;
+}
+.surah-popup.remove{
+    transform: translateX(100%);
+    transition: .7s transform ease-in;
+}
+.surah-popup::-webkit-scrollbar{
+    width:10px;
+    background-color: var(--f-color);
+}
+.surah-popup::-webkit-scrollbar-thumb{
+    background-color: var(--color-3);
+}
+.close-popup{
+    position: sticky;
+    top:10px;
+    right:10px;
+    width:40px;
+    height:40px;
+    box-shadow: 1px 0 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 23px;
+}
+.ayat-container{
+    padding:20px;
+    width:calc(100% - 50px);
+    min-height:100vh;
+    margin-right: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+.ayat-container p{
+    line-height: 2;
+    width:100%;
+    margin-bottom: 15px;
+    border-bottom:2px solid var(--color-3);
+}
+
+/* start section time */
+.time-container{
+    flex-wrap: wrap;
+}
+.time .card{
+    width:220px;
+    height:280px;
+    box-shadow: 1px 0 5px 0px;
+    margin:0 10px 10px 0;
+}
+.time .card .animation-time{
+    width:160px;
+    height:160px;
+    border-radius: 50%;
+    animation: loop  5s infinite  linear;
+}
+
+.time .card .position-absolute{
+    top:37%;
+}
+@keyframes loop{
+    0%{
+        transform:rotate(0deg); 
+        border:8px dashed var(--color-3);
+    }
+    100%{
+        transform:rotate(360deg);
+        border:8px dashed var(--color-3);
+    }
+}
+.time .card span{
+    color:var(--color-3);
+    font-size: 22px;
+    
+}
+/* end section time */
+
+/* start section footer */
+
+.footer .icon{
+    top:75%;
+    left:50%;
+    transform: translate(-50% , -50%);
+    z-index: 10;
+}
+.footer .icon svg{
+    font-size: 32px;
+    margin-right: 17px;
+    cursor: pointer;
+    color:var(--f-color);
+    transition: .4s ease-in;
+}
+.footer .icon svg:hover{
+    color:var(--color-2);
+}
+
+/* end section footer */
+
+.active-background{
+    background-color:var(--main-background);
+}
+
+.chanal-live{
+    background-color: var(--second-background);
+}
+.azcar{
+    background-color: var(--second-background);
+}
+.contant_azcar{
+    height:300px;
+    background-color: var(--f-color);
+    box-shadow: 2px 0 7px 1px;
+}

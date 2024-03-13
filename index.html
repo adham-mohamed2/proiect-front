@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تلاوه</title>
+    <!-- css fils -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- goole fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+</head>
+<body>
+    <!-- strat navbar -->
+    <div class="navbar-expand-lg navbar">
+        <div class="container position-relative">
+            <img class="navbar-brand" src="img/tilawa.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>        
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 active" aria-current="page" href="#home">الصفحه الرئيسيه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3" href="#Ahadis">أحاديث</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 " href="#leacure" tabindex="-1" aria-disabled="true">محاضرات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 " href="#koran" tabindex="-1" aria-disabled="true">القرأن الكريم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 " href="#time" tabindex="-1" aria-disabled="true">أوقات الصلاه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 " href="#contact" tabindex="-1" aria-disabled="true">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end navbar -->
+
+    <!-- start landing section -->
+        <div class="landing-section" id="home">
+            <div class="container">
+                <div class="contant">
+                    <h1 >مرحبا بك في <span class="my-4 d-block" >موقع التلاوه الاسلامي</span></h1>
+                    <a class="main-btn btn  btn-lg" href="#tlawa">
+                        <span>ابدء التصفح</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    <!-- end landing section -->
+    
+    <!-- start section tlawa -->
+    <div class="tlawa py-5 text-center" id="tlawa">
+        <div class="container">
+            <h2 class="header py-3 mb-5 text-center">اختر قارئ واستمع الي القرءان الكريم</h2>
+            <div class="row contant-tlawa">
+                <div class="col-sm-4 col-12">
+                    <fieldset>
+                        <label for="" class="form-label">اختر قارئ</label>
+                        <select class="form-select form-select-md my-4 choose-registar" aria-label=".form-select-lg example">
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <fieldset>
+                        <label for="" class="form-label">اختر روايه</label>
+                        <select class="form-select form-select-md my-4 choose-rewaya" aria-label=".form-select-lg example">
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <fieldset>
+                        <label for="" class="form-label">اختر سوره</label>
+                        <select class="form-select form-select-md my-4 choose_surah" aria-label=".form-select-lg example">
+                            
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="col-12">
+                    <audio id="audioplayer" controls autoplay muted  style="width:100%">
+                        <source src="" type="audio/ogg">
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section talawa -->
+
+    <!-- start section Ahadis -->
+    <div class="Ahadis py-5" id="Ahadis">
+        <div class="container">
+            <h2 class="header py-3 mb-5 text-center">احاديث</h2>
+            <div class="contant">
+                <div class="show-contant d-flex align-items-center justify-content-between">
+                    
+                </div>
+                <div class="icon-button my-3 d-flex align-items-center justify-content-between">
+                    <button class="btn btn-success prev">السابق</button>
+                    <span class="number-Ahdis d-block"></span>
+                    <button class="btn btn-success next">التالي</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section Ahadis -->
+
+    <!-- start section leacure -->
+    <div class="leacure py-5" id="leacure">
+        <div class="container">
+            <h2 class="header py-3 mb-5 text-center">محاضرات</h2>
+            <div class="row">
+                <div class="col-md-6 col-sm-12  mb-5 col-leacure">
+                    <div class="contant-leacure w-100  d-flex mb-3">
+                        <div class=" col-12 show-leacure-1 w-100">
+                            <div data-servar="https://www.youtube-nocookie.com/embed/x8aJqqJ_c2s?si=5aRv8AIMbXav8J2z?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div  class="contant-text">
+                                    <span class="d-block mb-3">الفرق بين الشيطان والنفس الامارة بالسوء</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الشعراوي</p>
+                                </div>
+                                <img class="logo-leacure" src="img/sha.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/lyPKSTwC3qI?si=RFapsJCetHXoI2dj?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">حكم الاستماع الى الموسيقا والاغاني</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الشعراوي</p>
+                                </div>
+                                <img class="logo-leacure" src="img/sha.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/FEGyjWYPvGQ?si=1EwHjauUeoS7hyWv?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">خطره لا طقنطو من روح الله سبحانه وتعالى</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الشعراوي</p>
+                                </div>
+                                <img class="logo-leacure" src="img/sha.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/2cmrU-HgNK4?si=1PsZyLPuyoR5mt_B?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">من اجمل خطب الشيخ الشعراوي عن الرزق</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الشعراوي</p>
+                                </div>
+                                <img class="logo-leacure" src="img/sha.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/kYaFq_5FTdE?si=q9-zU0RrAC7Zsp09?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">لماذا نزل القرأن عربيا</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الشعراوي</p>
+                                </div>
+                                <img class="logo-leacure" src="img/sha.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class=" col-12 show-leacure-1">
+                            <div data-servar="https://www.youtube-nocookie.com/embed/FUH9aCyMV1M?si=wCdZW0n3_apPJIOB?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">عجائب الكون ولغاته</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الشعراوي</p>
+                                </div>
+                                <img class="logo-leacure" src="img/sha.jpg" alt="">                           
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/yXbfCldK6-c?si=2NR4PED_HDP4Vxj5?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">أجمل خطبة عن الله عزوجل</span>
+                                    <p>محاضره رائعه من تقديم الشيخ بدر المشاري</p>
+                                </div>
+                                <img class="logo-leacure" src="img/بدر.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/Grqje3zWarY?si=JKMSAug9qXjg8xvC?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">محاضرة للشيخ بدر المشاري | في بيوت الانبياء </span>
+                                    <p>محاضرة رائعه من تقديم للشيخ بدر المشاري</p>
+                                </div>
+                                <img class="logo-leacure" src="img/بدر.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/vtWBaysJygE?si=OTKxeNUMsGDXNtFS?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">لن تترك الصلاة بعد سماع هذا الدرس.</span>
+                                    <p>محاضرة رائعه من تقديم للشيخ بدر المشاري</p>
+                                </div>
+                                <img class="logo-leacure" src="img/بدر.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/h1MWKchSGUw?si=W8Kf_3DVx63hXp4f?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">اسهل طريقة للتوبة من اي ذنب فعلته اخبرنا عنها النبي</span>
+                                    <p>محاضرة رائعه من تقديم للشيخ بدر المشاري</p>
+                                </div>
+                                <img class="logo-leacure" src="img/بدر.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class=" col-12 show-leacure-1">
+                            <div data-servar="https://www.youtube-nocookie.com/embed/yFQtFuexwrY?si=9wPgRhjX2DgwE94c?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">أجمل خطبة عن الله عزوجل</span>
+                                    <p>محاضرة رائعه من تقديم للشيخ بدر المشاري</p>
+                                </div>
+                                <img class="logo-leacure" src="img/بدر.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/oTzmXLy0mIw?si=3t_OI_5rSJVeBBxz?rel=0" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    
+                                    <span class="d-block mb-3">محاضرة الإيمان بالقضاء والقدر </span>
+                                    <p>محاضره رائعه من تقديم الشيخ عثمان محمد الخميس</p>
+                                </div>
+                                <img class="logo-leacure" src="img/عثمان.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/ul1bG2whHuk?si=JtSvNPNHWNbG3c7x" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">الحكمة في التعامل مع الناس</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الحويني</p>
+                                </div>
+                                <img class="logo-leacure" src="img/الحويني.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/FeNQTu1-MWw?si=GIcVt2xitpz4yxiS" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">رمضان لا مثيل له</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الحويني</p>
+                                </div>
+                                <img class="logo-leacure" src="img/الحويني.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/o4deZzUj_hs?si=z6_scdkeB_GBOYim" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">علاج الهم والحزن</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الحويني</p>
+                                </div>
+                                <img class="logo-leacure" src="img/الحويني.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class=" col-12 show-leacure-1">
+                            <div data-servar="https://www.youtube-nocookie.com/embed/AoP99ZLoYug?si=bnKAauG25wkZSDr2" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">ذكر الله تعالى</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الحويني</p>
+                                </div>
+                                <img class="logo-leacure" src="img/الحويني.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/4-R9-MfNmxw?si=gSn8SEIIba_-G4sa" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">مهم: كيف تتغلب على قرينك؟</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الحويني</p>
+                                </div>
+                                <img class="logo-leacure" src="img/الحويني.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/PqhWo5EuEF4?si=Q8v5sKs3_IY92gMN" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">لقاء الفجر .. حياة القلب</span>
+                                    <p>محاضره رائعه من تقديم الشيخ الحويني</p>
+                                </div>
+                                <img class="logo-leacure" src="img/الحويني.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/WMqhAMRFMCo?si=NtTWh9T-38dSXW7X" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3"> خطبة عن " الموت</span>
+                                    <p>محاضره رائعه من تقديم الشيخ  محمود الحسنات</p>
+                                </div>
+                                <img class="logo-leacure" src="img/محمود.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/t0iSY-plCzc?si=zYdl60GVG89BTPZM" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">مهما بلغت ذنوبك تب الى الله</span>
+                                    <p>محاضره رائعه من تقديم الشيخ  محمود الحسنات</p>
+                                </div>
+                                <img class="logo-leacure" src="img/محمود.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12  show-leacure-1">
+                            <div data-servar="https://www.youtube-nocookie.com/embed/9TziV2WS4xY?si=ZOxXb1m4dEEIKuRd" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">محاضرة الدنيا دار ابتلاء وامتحان كاملة</span>
+                                    <p>محاضرة رائعه من تقديم الشيخ عثمان محمد الخميس</p>
+                                </div>
+                                <img class="logo-leacure" src="img/عثمان.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/Vsd28pzk5Z0?si=_nUoMHyqQlFXr5Lv" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">أبشري يا عائشة</span>
+                                    <p>حادثة الافك - كأنك تسمعها لأول مرة من الداعية محمود الحسنات</p>
+                                </div>
+                                <img class="logo-leacure" src="img/محمود.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/O79cbSP6CRs?si=9lK1lnrHT3ji7ER-" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">يوماً سنرحل </span>
+                                    <p>من أكثر الخطب الجديدة والمؤثرة للشيخ محمود الحسنات</p>
+                                </div>
+                                <img class="logo-leacure" src="img/محمود.jpg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/kizhM8K_JbU?si=m1V1oattyg1ciz0C" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">قصص ممتعة من الشيخ بدر المشاري</span>
+                                    <p>ساعة مع اجمل 10 قصص تسمعها من الشيخ بدر المشاري</p>
+                                </div>
+                                <img class="logo-leacure" src="img/بدر.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/T5eQ70Al-X4?si=R2Kz71JPl_BcvOr3" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">كيف يظلم الإنسان نفسه.. تفسير الشعراوي لسورة النحل</span>
+                                    <p>محاضرة رائعه من تقديم الشيخ الشعراوي</p>
+                                </div>
+                                <img class="logo-leacure" src="img/sha.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12  show-leacure-1">
+                            <div data-servar="https://www.youtube-nocookie.com/embed/ClFN-oQHBmU?si=y2XLGd9OLJdRy-eB" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <p>محاضرة رائعه من تقديم الشيخ عثمان محمد الخميس</p>
+                                </div>
+                                <img class="logo-leacure" src="img/عثمان.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/1ulIpoCzgAs?si=iRnZTeGXI1ZpVupm" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    
+                                    <span class="d-block mb-3">أسئلة حول السُنَّة النبويّة والشبهات في الأحاديث</span>
+                                    <p>محاضرة رائعه من تقديم الشيخ عثمان محمد الخميس</p>
+                                </div>
+                                <img class="logo-leacure" src="img/عثمان.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/ArrD74VPYh0?si=TEMX_9Mpb_Jyhekv" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3"> واجب المسلمين تجاه أهل غزة</span>
+                                    <p>محاضرة رائعه من تقديم الشيخ عثمان محمد الخميس</p>
+                                </div>
+                                <img class="logo-leacure" src="img/عثمان.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/b4AxOJ6EI2o?si=ojBXe-ZJBIllSjLX" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">كن مميز الشيخ د. عثمان الخميس</span>
+                                    <p>محاضرة رائعه من تقديم الشيخ عثمان محمد الخميس</p>
+                                </div>
+                                <img class="logo-leacure" src="img/عثمان.jpeg" alt="">
+                            </div>
+                            <div data-servar="https://www.youtube-nocookie.com/embed/9HAf5xt-0v4?si=qLT_-fM8xj9x7_V3" class="cart-leacure p-3 d-flex align-items-center justify-content-between mb-2">
+                                <div class="contant-text">
+                                    <span class="d-block mb-3">وفي السماء رزقكم وما توعدون</span>
+                                    <p>محاضرة رائعه من تقديم الشيخ عثمان محمد الخميس</p>
+                                </div>
+                                <img class="logo-leacure" src="img/عثمان.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-leacure d-flex justify-content-between align-items-center">
+                        <button onclick="right()" type="button" class="btn btn-success btn-md">التالي</button>
+                        <button onclick="left()" type="button" class="btn btn-success btn-md">السابق</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <iframe class="fram-leacure" width="560" height="315" src="https://www.youtube-nocookie.com/embed/x8aJqqJ_c2s?si=5aRv8AIMbXav8J2z?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- <iframe class="leacure-2" width="560" height="315" src="https://www.youtube-nocookie.com/embed/lyPKSTwC3qI?si=RFapsJCetHXoI2dj?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-3" width="560" height="315" src="https://www.youtube-nocookie.com/embed/FEGyjWYPvGQ?si=1EwHjauUeoS7hyWv?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-4" width="560" height="315" src="https://www.youtube-nocookie.com/embed/2cmrU-HgNK4?si=1PsZyLPuyoR5mt_B?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-5" width="560" height="315" src="https://www.youtube-nocookie.com/embed/kYaFq_5FTdE?si=q9-zU0RrAC7Zsp09?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-6" width="560" height="315" src="https://www.youtube-nocookie.com/embed/FUH9aCyMV1M?si=wCdZW0n3_apPJIOB?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+                    <iframe class="leacure-7" width="560" height="315" src="https://www.youtube-nocookie.com/embed/yXbfCldK6-c?si=2NR4PED_HDP4Vxj5?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-8" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Grqje3zWarY?si=JKMSAug9qXjg8xvC?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-9" width="560" height="315" src="https://www.youtube-nocookie.com/embed/vtWBaysJygE?si=OTKxeNUMsGDXNtFS?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-10" width="560" height="315" src="https://www.youtube-nocookie.com/embed/h1MWKchSGUw?si=W8Kf_3DVx63hXp4f?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-11" width="560" height="315" src="https://www.youtube-nocookie.com/embed/yFQtFuexwrY?si=9wPgRhjX2DgwE94c?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-12" width="560" height="315" src="https://www.youtube-nocookie.com/embed/NtlnwlBNztE?si=9l6rGmhZ87H-jtla?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    <iframe class="leacure-13" width="560" height="315" src="https://www.youtube-nocookie.com/embed/ul1bG2whHuk?si=JtSvNPNHWNbG3c7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-14" width="560" height="315" src="https://www.youtube-nocookie.com/embed/FeNQTu1-MWw?si=GIcVt2xitpz4yxiS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-15" width="560" height="315" src="https://www.youtube-nocookie.com/embed/o4deZzUj_hs?si=z6_scdkeB_GBOYim" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-16" width="560" height="315" src="https://www.youtube-nocookie.com/embed/AoP99ZLoYug?si=bnKAauG25wkZSDr2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-17" width="560" height="315" src="https://www.youtube-nocookie.com/embed/4-R9-MfNmxw?si=gSn8SEIIba_-G4sa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-18" width="560" height="315" src="https://www.youtube-nocookie.com/embed/PqhWo5EuEF4?si=Q8v5sKs3_IY92gMN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    <iframe class="leacure-20" width="560" height="315" src="https://www.youtube-nocookie.com/embed/WMqhAMRFMCo?si=NtTWh9T-38dSXW7X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-21" width="560" height="315" src="https://www.youtube-nocookie.com/embed/t0iSY-plCzc?si=zYdl60GVG89BTPZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-22" width="560" height="315" src="https://www.youtube-nocookie.com/embed/3CQqFNLnoHE?si=Hv3HYVYq3xFnlBBW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-23" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Vsd28pzk5Z0?si=_nUoMHyqQlFXr5Lv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-24" width="560" height="315" src="https://www.youtube-nocookie.com/embed/O79cbSP6CRs?si=9lK1lnrHT3ji7ER-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="leacure-25" width="560" height="315" src="https://www.youtube-nocookie.com/embed/kizhM8K_JbU?si=m1V1oattyg1ciz0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!-- end section leacure -->
+
+    <!-- start section koran -->
+        <div class="koran py-5" id="koran">
+            <div class="container">
+                <h2 class="header py-3 text-center">القرأن الكريم</h2>
+                <form class=" my-5 d-flex">
+                    <label class="btn btn-outline-success search-label"  for="btn-search">بحث</label>
+                    <input type="text" id="btn-search" class="form-control" placeholder="ابحث هنا">
+                </form>
+                <div class="row">
+                    <div class="col d-flex align-items-center justify-content-between  contant-surah">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- end section koran -->
+
+    <!-- start section popup -->
+
+    <div class="surah-popup">
+        <div class="close-popup">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="ayat-container">
+            
+        </div>
+    </div>
+
+    <!-- end section popup -->
+
+    <!-- start chanal live -->
+
+    <div class="chanal-live py-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12-lg mb-4">
+                    <h2 class=" header py-3 mb-5">اختر قناة البث المباشر</h2>
+                    <span><a class="btn bg-white btn-lg text-danger" href="javascript:void()" onclick="playLive('https://win.holol.com/live/quran/playlist.m3u8')" >قناة القرأن الكريم</a></span>
+                    <span><a class="btn bg-white btn-lg mx-2 text-danger" href="javascript:void()" onclick="playLive('https://win.holol.com/live/sunnah/playlist.m3u8')">قناة السنه النبويه</a></span>
+                </div>
+                <video  id="video"  width="100%" controls  >
+                        <source   src="" type="video/mp4">
+                        <source src="" type="video/ogg">
+                </video>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- start section tafsir -->
+    <div class="tafsir py-5 text-center" id="tafsir">
+        <div class="container">
+            <h2 class="header py-3 mb-5 text-center">اختر سوره واستمع الي التقسير الصحيح</h2>
+            <div class="row contant-tafsir">
+                
+                    <div class="col-12">
+                        <fieldset>
+                            <label for="" class="form-label">اختر سوره</label>
+                            <select class="form-select form-select-md my-4 choose-tafsir" aria-label=".form-select-lg example">
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div class="col-12">
+                        <audio id="audio-tafsir" controls autoplay muted  style="width:100%">
+                            <source src="" type="audio/ogg">
+                            <source src="" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- end section tafsir -->
+
+    <!-- start section Azcar  -->
+
+    <div class="azcar py-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="header py-3 mb-5">
+                        اذكار الصباح والمساء
+                    </h2>
+                    <div class="button">
+                        <span><a onclick="azckar_Alsapah()" id="azcar-Alsabah" class="btn btn-lg bg-white text-danger" href="javascript:void">اذكار الصباح</a></span>
+                        <span><a onclick="azckar_Almasaa()" id="azckar-Almasaa" class="btn btn-lg bg-white text-danger mx-2" href="javascript:void">اذكار المساء</a></span>
+                        <span><a onclick="fetch_taspeh()" id="taspeh" class="btn btn-lg bg-white text-danger mx-2" href="javascript:void">تسابيح</a></span>
+                        <span><a onclick="fetch_Adaya()" id="taspeh" class="btn btn-lg bg-white text-danger mx-2" href="javascript:void">أدعية قرآنية</a></span>
+                    </div>
+                </div>
+                <div class="col-12 my-4 col_azckar">
+                    <div class="contant_azcar p-5 d-flex justify-content-center align-items-center">
+                        
+                    </div>
+                </div>
+                <div class="icon d-flex align-items-center justify-content-between">
+                    <button  type="button" class="prev-azckar btn btn-success ">السابق</button>
+                    <button  type="button" class="next-azckar btn btn-success">التالي</button>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <!-- end section Azcar -->
+
+    <!-- start section time -->
+    <div class="time py-5 " id="time">
+        <div class="container">
+            <h2 class=" header text-center py-3 mb-5">اوقات الصلاه</h2>
+            <div class="row">
+                <div class="col time-container d-flex justify-content-center d-flex justify-content-center mb-4">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section time -->
+
+    <!-- start section footer -->
+    <div  class="footer text-center position-relative mt-3" id="contact">
+        <svg  xmlns="http://www.w3.org/2000/svg" class="svg-animation" viewBox="0 0 1440 320"><path fill="#00cba9" fill-opacity="1" d="M0,32L40,32C80,32,160,32,240,64C320,96,400,160,480,176C560,192,640,160,720,133.3C800,107,880,85,960,112C1040,139,1120,213,1200,224C1280,235,1360,181,1400,154.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+        <div class="icon d-flex align-items-center position-absolute">
+            <a href="https://www.facebook.com/profile.php?id=100086180029281&locale=ar_AR"><i class=" fa-brands  fa-facebook"></i></a>
+            <a href="https://www.instagram.com/adhammohamed6153/"><i class=" fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/Adham-Mohamed123/project-frontend"><i class=" fa-brands fa-github"></i></a>
+            <i class=" fa-brands fa-linkedin"></i>
+            <i class=" fa-brands fa-twitter"></i>
+        </div>
+    </div>
+    <!-- end section footer -->
+
+
+
+    <!-- javascript file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+
+    
+</body>
+</html>
