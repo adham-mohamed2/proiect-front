@@ -340,15 +340,20 @@ body{
 
 /* start section footer */
 
+.footer{
+    padding:0;
+}
+.footer svg{
+    transform: translateY(10px);
+}
 .footer .icon{
-    top:75%;
-    left:50%;
-    transform: translate(-50% , -50%);
-    z-index: 10;
+    
+    background-color: #00cba9;
+    color:var(--f-color)
 }
 .footer .icon svg{
     font-size: 32px;
-    margin-right: 30px;
+    margin: 15px;
     cursor: pointer;
     color:var(--f-color);
     transition: .4s ease-in;
@@ -356,6 +361,7 @@ body{
 .footer .icon svg:hover{
     color:var(--color-2);
 }
+
 
 /* end section footer */
 
